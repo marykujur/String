@@ -1,0 +1,34 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+void divideString(string s , int N)
+{
+   int length=s.size();
+   if(length % N !=0 )
+     {
+        cout<<"divisible not possible";
+        return;
+     }
+
+  int partsize=length/N;
+
+   for(int i=0;i < s.size();i++)
+      {
+        if(i % partsize==0)
+            cout<<endl;
+       cout<<s[i];
+      }
+}
+int main()
+{
+    //Input string
+    string s;
+    cin>>s;
+    int k;
+    cout<<"\nEnter the value of N: ";
+    cin>>k;
+    
+    divideString(s, k);
+    return 0;
+}
